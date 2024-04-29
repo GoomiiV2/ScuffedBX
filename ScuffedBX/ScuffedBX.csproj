@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>AnyCPU;x64</Platforms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>ScuffedBX</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Bindings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CppSharp.Runtime" Version="1.1.5.3168" />
+  </ItemGroup>
+
+</Project>

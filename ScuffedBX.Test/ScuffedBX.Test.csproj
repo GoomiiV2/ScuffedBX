@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScuffedBX\ScuffedBX.csproj" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy /Y &quot;$(SolutionDir)build\$(PlatformName)\$(ConfigurationName)\libfbxsdk.dll&quot; &quot;$(OutputPath)libfbxsdk.dll&quot;&#xD;&#xA;copy /Y &quot;$(SolutionDir)build\$(PlatformName)\$(ConfigurationName)\ScuffedBX.Native.dll&quot; &quot;$(OutputPath)ScuffedBX.Native.dll&quot;" />
+  </Target>
+
+</Project>

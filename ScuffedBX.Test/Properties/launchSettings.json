@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ScuffedBX.Test": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
